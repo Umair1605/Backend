@@ -1,4 +1,7 @@
 require('dotenv').config();
+var cors = require('cors')
+
+
 
 const routes = require('./routes/routes');
 const express = require('express');
@@ -44,11 +47,12 @@ database.once('connected', () => {
     console.log('Database Connected');
 })
 const app = express();
-
+app.use(cors());
 app.use(express.json());
 
-app.listen(3000, () => {
-    console.log(`Server Started at ${3000}`)
+const PORT = process.env.PORT || 3000
+app.listen(PORT, () => {
+    console.log(`Server Started at ${PORT}`)
 })
 
 app.use('/api', routes)
