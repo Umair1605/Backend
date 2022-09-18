@@ -5,7 +5,7 @@ const router = express.Router()
 const userController = require('../controller/user');
 
 //Post Method
-router.post('/post',userController.postUserRegister);
+router.post('/createUSer',userController.postUserRegister);
 
 //Post Method
 router.get('/getUser',userController.getUser);
