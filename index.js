@@ -13,7 +13,7 @@ const ContractAddress = require ('./contractData/ERC20-address.json');
 const Update = require('./functions/updateBalance');
 
 // set provider for all later instances to use
-Contract.setProvider('wss://eth-rinkeby.alchemyapi.io/v2/wXDhX71Unm5M-lJB86RW840J3QlUTTsA');
+Contract.setProvider('wss://eth-rinkeby.alchemyapi.io/v2/{key}');
 
 // call Contract
 var contract = new Contract(abi,ContractAddress.address);
